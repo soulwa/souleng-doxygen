@@ -1,0 +1,28 @@
+\doxysection{Scripted\+Scene.\+hpp}
+\hypertarget{ScriptedScene_8hpp_source}{}\label{ScriptedScene_8hpp_source}\index{include/ScriptedScene.hpp@{include/ScriptedScene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <pybind11/pybind11.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structScriptedScene}{ScriptedScene}}\ \{}
+\DoxyCodeLine{00009\ \ \ \mbox{\hyperlink{structScriptedScene_a8324d8d7bb9603b702aeb31dae3ea134}{ScriptedScene}}(pybind11::module\_\ scene);}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{structScriptedScene}{\string~ScriptedScene}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structScriptedScene_acdb7d89802e430f09a479c9802a7ffc1}{StartUp}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structScriptedScene_ab7037cb59163dee30ace47bdc6643e1f}{Shutdown}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structScriptedScene_ae68aa43f12604b5fb1c36e8f0472ff7a}{Input}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structScriptedScene_a193799a03b896f38fa8106c7af168e90}{Update}}(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structScriptedScene_a7d6ea458f0868afc65019cbb8b3d1d71}{Render}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{bool}\ mActive\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00030\ \ \ pybind11::module\_\ mScene;}
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}

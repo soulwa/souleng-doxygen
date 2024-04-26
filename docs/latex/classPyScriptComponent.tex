@@ -1,0 +1,114 @@
+\doxysection{Py\+Script\+Component Class Reference}
+\hypertarget{classPyScriptComponent}{}\label{classPyScriptComponent}\index{PyScriptComponent@{PyScriptComponent}}
+
+
+{\ttfamily \#include $<$Script\+Component.\+hpp$>$}
+
+Inheritance diagram for Py\+Script\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPyScriptComponent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPyScriptComponent_ae30e6d008ce643cde9facce1d31686cf}{Input}} () override
+\begin{DoxyCompactList}\small\item\em Called once per frame to handle any new input.   \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPyScriptComponent_a4f2b6a5995173b157ade3951a845d1c3}{Update}} (float dt) override
+\item 
+void \mbox{\hyperlink{classPyScriptComponent_a9495d0b6f0e3fab26736d4f24ecebb9a}{Render}} () override
+\item 
+\Hypertarget{classPyScriptComponent_a918a8a3ffb5ee72ead98eb693c343620}\label{classPyScriptComponent_a918a8a3ffb5ee72ead98eb693c343620} 
+{\bfseries Script\+Component} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structComponent}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Game\+Object} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ ent)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{structGameObject}{Game\+Object} this component is attached to. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ {\bfseries Get\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the \doxylink{structGameObject}{Game\+Object} this component is attached to, behind a shared pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Component} ()
+\begin{DoxyCompactList}\small\item\em Alias for {\ttfamily \doxylink{structComponent_affa7e45459d9ac50b0db8b5c4e3e9af8}{Get\+Game\+Object()}-\/\texorpdfstring{$>$}{>}Get\+Component\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}()}, for easier scripting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPyScriptComponent_afcb1e84310c903d5e7e51887aee2918e}\label{classPyScriptComponent_afcb1e84310c903d5e7e51887aee2918e} 
+static Component\+Type {\bfseries Get\+Type} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classScriptComponent}{Script\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+static Component\+Type \mbox{\hyperlink{classScriptComponent_aea51c4b20e1a2e3ef7ecbcff36b012ff}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of this component to make querying {\ttfamily Get\+Component} easier.   \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{structComponent}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+static Component\+Type {\bfseries Get\+Type} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of this component to make querying {\ttfamily Get\+Component} easier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{structComponent}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ {\bfseries m\+Game\+Object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trampoline class which allows Python code to override {\ttfamily \doxylink{classScriptComponent}{Script\+Component}} methods, and for C++ code to call those overridden methods instead of {\ttfamily \doxylink{classScriptComponent}{Script\+Component}} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPyScriptComponent_ae30e6d008ce643cde9facce1d31686cf}\label{classPyScriptComponent_ae30e6d008ce643cde9facce1d31686cf} 
+\index{PyScriptComponent@{PyScriptComponent}!Input@{Input}}
+\index{Input@{Input}!PyScriptComponent@{PyScriptComponent}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Py\+Script\+Component\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called once per frame to handle any new input.   
+
+
+
+Reimplemented from \mbox{\hyperlink{classScriptComponent_ab70ee3a775eeaaa8f6b068840c00bdaf}{Script\+Component}}.
+
+\Hypertarget{classPyScriptComponent_a9495d0b6f0e3fab26736d4f24ecebb9a}\label{classPyScriptComponent_a9495d0b6f0e3fab26736d4f24ecebb9a} 
+\index{PyScriptComponent@{PyScriptComponent}!Render@{Render}}
+\index{Render@{Render}!PyScriptComponent@{PyScriptComponent}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Py\+Script\+Component\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+Called once per frame to render any necessary parts of this component to the screen   
+
+Reimplemented from \mbox{\hyperlink{classScriptComponent_a38f3891a5f8dbda69e6d0ccf334ced81}{Script\+Component}}.
+
+\Hypertarget{classPyScriptComponent_a4f2b6a5995173b157ade3951a845d1c3}\label{classPyScriptComponent_a4f2b6a5995173b157ade3951a845d1c3} 
+\index{PyScriptComponent@{PyScriptComponent}!Update@{Update}}
+\index{Update@{Update}!PyScriptComponent@{PyScriptComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Py\+Script\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+Called once per frame for any timing specific logic 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The tick rate of the game, in seconds. Useful for things like velocity calculations   \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classScriptComponent_ad92b4b327979e0eeaa91f63c97dfd465}{Script\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/components/Script\+Component.\+hpp\item 
+src/components/Script\+Component.\+cpp\end{DoxyCompactItemize}

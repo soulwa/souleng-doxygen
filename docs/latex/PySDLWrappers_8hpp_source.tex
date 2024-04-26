@@ -1,0 +1,13 @@
+\doxysection{Py\+SDLWrappers.\+hpp}
+\hypertarget{PySDLWrappers_8hpp_source}{}\label{PySDLWrappers_8hpp_source}\index{include/util/PySDLWrappers.hpp@{include/util/PySDLWrappers.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ py\_SDL\_Log(std::string\ s)\ \{\ SDL\_Log(\textcolor{stringliteral}{"{}\%s"{}},\ s.c\_str());\ \}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{long}\ py\_SDL\_GetTicks()\ \{\ \textcolor{keywordflow}{return}\ SDL\_GetTicks();\ \}}
+\DoxyCodeLine{00011\ }
+
+\end{DoxyCode}

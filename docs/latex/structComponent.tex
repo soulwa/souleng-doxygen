@@ -1,0 +1,92 @@
+\doxysection{Component Struct Reference}
+\hypertarget{structComponent}{}\label{structComponent}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+hpp$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.857143cm]{structComponent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structComponent_abba211bfa6a773487aa8d354a8138d9d}{Input}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame to handle any new input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structComponent_a3c50208a8c7ea021b0ae2b9dfbaec65a}{Update}} (float delta\+Time)
+\item 
+virtual void \mbox{\hyperlink{structComponent_aa01692c6b2244621e9ab2b56ceedcf5c}{Render}} ()
+\item 
+\Hypertarget{structComponent_a4c410ec834526f0d09906b82d746cb0e}\label{structComponent_a4c410ec834526f0d09906b82d746cb0e} 
+void {\bfseries Set\+Game\+Object} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ ent)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{structGameObject}{Game\+Object} this component is attached to. \end{DoxyCompactList}\item 
+\Hypertarget{structComponent_affa7e45459d9ac50b0db8b5c4e3e9af8}\label{structComponent_affa7e45459d9ac50b0db8b5c4e3e9af8} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ {\bfseries Get\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the \doxylink{structGameObject}{Game\+Object} this component is attached to, behind a shared pointer. \end{DoxyCompactList}\item 
+\Hypertarget{structComponent_ade2923c0ac7b8d8f0c21690dad09bd95}\label{structComponent_ade2923c0ac7b8d8f0c21690dad09bd95} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Component} ()
+\begin{DoxyCompactList}\small\item\em Alias for {\ttfamily \doxylink{structComponent_affa7e45459d9ac50b0db8b5c4e3e9af8}{Get\+Game\+Object()}-\/\texorpdfstring{$>$}{>}Get\+Component\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}()}, for easier scripting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structComponent_ad54bd878b52323829b90ccc357f992a9}\label{structComponent_ad54bd878b52323829b90ccc357f992a9} 
+static Component\+Type {\bfseries Get\+Type} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of this component to make querying {\ttfamily Get\+Component} easier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structComponent_a3d250865df2425be355c8b9755803481}\label{structComponent_a3d250865df2425be355c8b9755803481} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structGameObject}{Game\+Object}} $>$ {\bfseries m\+Game\+Object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logical building block of the game engine. Components are attached to Game\+Objects and control everything from rendering, to physics, to input response, to general game logic. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structComponent_abba211bfa6a773487aa8d354a8138d9d}\label{structComponent_abba211bfa6a773487aa8d354a8138d9d} 
+\index{Component@{Component}!Input@{Input}}
+\index{Input@{Input}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called once per frame to handle any new input. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classScriptComponent_ab70ee3a775eeaaa8f6b068840c00bdaf}{Script\+Component}}, \mbox{\hyperlink{structCollision2DComponent_a7766ac561a88b2280b61a1605e264745}{Collision2\+DComponent}}, \mbox{\hyperlink{classPyScriptComponent_ae30e6d008ce643cde9facce1d31686cf}{Py\+Script\+Component}}, \mbox{\hyperlink{structTextureComponent_ae8082f33afc098d4700f08d96d354d72}{Texture\+Component}}, and \mbox{\hyperlink{structTransform_a818eb6debb1a52bbd235f649318593f3}{Transform}}.
+
+\Hypertarget{structComponent_aa01692c6b2244621e9ab2b56ceedcf5c}\label{structComponent_aa01692c6b2244621e9ab2b56ceedcf5c} 
+\index{Component@{Component}!Render@{Render}}
+\index{Render@{Render}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called once per frame to render any necessary parts of this component to the screen 
+
+Reimplemented in \mbox{\hyperlink{classScriptComponent_a38f3891a5f8dbda69e6d0ccf334ced81}{Script\+Component}}, \mbox{\hyperlink{structTextTexture_a293c30e4c4234bc2416342bb0c3ababf}{Text\+Texture}}, \mbox{\hyperlink{structCollision2DComponent_a1b6812713028e29de822429be05c1dd5}{Collision2\+DComponent}}, \mbox{\hyperlink{classPyScriptComponent_a9495d0b6f0e3fab26736d4f24ecebb9a}{Py\+Script\+Component}}, \mbox{\hyperlink{structTextureComponent_ac22469b9c534454410c4c55e28598302}{Texture\+Component}}, and \mbox{\hyperlink{structTransform_a97877497aa7a3ec8f341276d93249237}{Transform}}.
+
+\Hypertarget{structComponent_a3c50208a8c7ea021b0ae2b9dfbaec65a}\label{structComponent_a3c50208a8c7ea021b0ae2b9dfbaec65a} 
+\index{Component@{Component}!Update@{Update}}
+\index{Update@{Update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called once per frame for any timing specific logic 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The tick rate of the game, in seconds. Useful for things like velocity calculations \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classScriptComponent_ad92b4b327979e0eeaa91f63c97dfd465}{Script\+Component}}, \mbox{\hyperlink{structCollision2DComponent_a7104a6f5828e404017d81afc3edfc396}{Collision2\+DComponent}}, \mbox{\hyperlink{classPyScriptComponent_a4f2b6a5995173b157ade3951a845d1c3}{Py\+Script\+Component}}, \mbox{\hyperlink{structTextureComponent_ad361688f26ff8921dd708c8e5b550d7e}{Texture\+Component}}, and \mbox{\hyperlink{structTransform_a63a16a14fc40e7048ef25a7ff4fee6af}{Transform}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/components/Component.\+hpp\end{DoxyCompactItemize}

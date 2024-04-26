@@ -1,0 +1,41 @@
+\doxysection{Transform.\+hpp}
+\hypertarget{Transform_8hpp_source}{}\label{Transform_8hpp_source}\index{include/components/Transform.hpp@{include/components/Transform.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SDL3/SDL\_rect.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}util/Vector2.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTransform}{Transform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structComponent}{Component}}\ \{}
+\DoxyCodeLine{00011\ \ \ \mbox{\hyperlink{structTransform}{Transform}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{structTransform}{\string~Transform}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{static}\ ComponentType\ \mbox{\hyperlink{structTransform_a88fc555a5b9b6977866038507cb6a268}{GetType}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_a818eb6debb1a52bbd235f649318593f3}{Input}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_a63a16a14fc40e7048ef25a7ff4fee6af}{Update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_a97877497aa7a3ec8f341276d93249237}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_a9cd358e1dba150ef9817866406442717}{SetWidth}}(\textcolor{keywordtype}{float}\ w);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_aeb62faa3d0bd93a54d214535c9beb9b4}{SetHeight}}(\textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{structVector2}{Vector2}}\ \mbox{\hyperlink{structTransform_ab302089758eae9d59890d82d2c3ccdef}{GetPosition}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structTransform_ab90f672ac833d0720e98de80c6ab1f2b}{ContainsPoint}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTransform_a9686a72e06e83022681007a060438282}{MoveTo}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ SDL\_FRect\ \mbox{\hyperlink{structTransform_acff05aa6f29d45875522bd0f0de324b4}{GetRect}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ SDL\_FRect\ mRect\{.x\ =\ 20.0f,\ .y\ =\ 20.0f,\ .w\ =\ 32.0f,\ .h\ =\ 32.0f\};}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

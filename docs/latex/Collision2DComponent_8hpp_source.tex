@@ -1,0 +1,39 @@
+\doxysection{Collision2\+DComponent.\+hpp}
+\hypertarget{Collision2DComponent_8hpp_source}{}\label{Collision2DComponent_8hpp_source}\index{include/components/Collision2DComponent.hpp@{include/components/Collision2DComponent.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SDL3/SDL\_rect.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}util/Vector2.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCollision2DComponent}{Collision2DComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structComponent}{Component}}\ \{}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{structCollision2DComponent}{Collision2DComponent}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{structCollision2DComponent}{\string~Collision2DComponent}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{static}\ ComponentType\ \mbox{\hyperlink{structCollision2DComponent_a5e14ab8fc99a73938fc616e3560e10d4}{GetType}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_a7766ac561a88b2280b61a1605e264745}{Input}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_a7104a6f5828e404017d81afc3edfc396}{Update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_a1b6812713028e29de822429be05c1dd5}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_abe76e11057f8b85000d19826708f53e4}{SetWidth}}(\textcolor{keywordtype}{float}\ w);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_ad56476f3936639dd570848afe1f3eb6c}{SetHeight}}(\textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{structVector2}{Vector2}}\ \mbox{\hyperlink{structCollision2DComponent_a2922a7c7fef3bc9c34ce0656af739052}{GetPosition}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structCollision2DComponent_a4227888d7406b1bfb557d648f460b81c}{MoveTo}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ SDL\_FRect\ \mbox{\hyperlink{structCollision2DComponent_adaec70e9418179746fc0cc7172ebd24e}{GetRect}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ SDL\_FRect\ mRect\{.x\ =\ 20.0f,\ .y\ =\ 20.0f,\ .w\ =\ 32.0f,\ .h\ =\ 32.0f\};}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

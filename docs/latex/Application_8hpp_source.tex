@@ -1,0 +1,28 @@
+\doxysection{Application.\+hpp}
+\hypertarget{Application_8hpp_source}{}\label{Application_8hpp_source}\index{include/Application.hpp@{include/Application.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structApplication}{Application}}\ \{}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{structApplication_a1cf6c0017baed2a50af615f28ac63f82}{Application}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ std::string\ firstScene);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{structApplication}{\string~Application}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structApplication_a1c6bee9b081e28e50be7a60324e7a38d}{StartUp}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ std::string\ firstScene);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structApplication_a817892cf56c1c333d53be31e73e8c2f8}{Shutdown}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structApplication_a72747c744fd95cb6f96350bf58b326a6}{Input}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structApplication_add8435e8cede1ab06a59cdc220ea394c}{Loop}}(\textcolor{keywordtype}{float}\ targetFPS);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{bool}\ mRun\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00031\ \ \ SDL\_Window\ *mWindow;}
+\DoxyCodeLine{00032\ \ \ SDL\_Renderer\ *mRenderer;}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

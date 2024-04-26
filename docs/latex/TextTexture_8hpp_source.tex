@@ -1,0 +1,40 @@
+\doxysection{Text\+Texture.\+hpp}
+\hypertarget{TextTexture_8hpp_source}{}\label{TextTexture_8hpp_source}\index{include/components/TextTexture.hpp@{include/components/TextTexture.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3\_ttf/SDL\_ttf.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL3/SDL\_pixels.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ComponentType.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}components/TextureComponent.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTextTexture}{TextTexture}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structTextureComponent}{TextureComponent}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{structTextTexture}{TextTexture}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{structTextTexture}{TextTexture}}(std::string\ fontPath,\ \textcolor{keywordtype}{int}\ ptsize,\ SDL\_Color\ color);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{structTextTexture}{\string~TextTexture}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextTexture_ac54a25dfc1825a03961185d31f98084d}{SetFont}}(std::string\ fontPath,\ \textcolor{keywordtype}{int}\ ptsize);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextTexture_ab455322a636a51753a5fc7b69648c4c3}{SetText}}(std::string\ text);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextTexture_a4003fffb5fddc89fd519b5a2dcf7f3ee}{SetColor}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextTexture_ac398af7eca13e5c13d542f33ff138bef}{SizeTransformToTexture}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextTexture_a293c30e4c4234bc2416342bb0c3ababf}{Render}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ ComponentType\ \mbox{\hyperlink{structTextTexture_a4d6b6a50f85933511da4cd2f8702c2db}{GetType}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ dirty\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00043\ \ \ \ \ std::shared\_ptr<TTF\_Font>\ mFont;}
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ mText;}
+\DoxyCodeLine{00045\ \ \ \ \ SDL\_Color\ mColor;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ mWidth\{32\};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ mHeight\{32\};}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

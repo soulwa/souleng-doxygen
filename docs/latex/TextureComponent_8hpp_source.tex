@@ -1,0 +1,38 @@
+\doxysection{Texture\+Component.\+hpp}
+\hypertarget{TextureComponent_8hpp_source}{}\label{TextureComponent_8hpp_source}\index{include/components/TextureComponent.hpp@{include/components/TextureComponent.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL3/SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Component.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTextureComponent}{TextureComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structComponent}{Component}}\ \{}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{structTextureComponent}{TextureComponent}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_a18efe0d89deadcb11b236328ec941a08}{CreateTexture}}(std::string\ filepath);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{comment}{//\ @param\ x,y\ The\ top\ left\ corner\ of\ the\ region\ of\ the\ texture\ to\ render}}
+\DoxyCodeLine{00019\ \ \ \textcolor{comment}{//\ @param\ w,h\ The\ size\ of\ the\ region\ of\ the\ texture\ to\ render}}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_a4c4de886128b85f320db19e94dd51de2}{SelectSourceRect}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_a3d16afe3223cd830785ef664d978c25a}{ClearSourceRect}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{structTextureComponent}{\string~TextureComponent}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{static}\ ComponentType\ \mbox{\hyperlink{structTextureComponent_ac87178f675e85d94d91688c3d9ba05ef}{GetType}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_ae8082f33afc098d4700f08d96d354d72}{Input}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_ad361688f26ff8921dd708c8e5b550d7e}{Update}}(\textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structTextureComponent_ac22469b9c534454410c4c55e28598302}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ std::shared\_ptr<SDL\_Texture>\ mTexture;}
+\DoxyCodeLine{00041\ \ \ SDL\_FRect\ *mSrcRect;}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

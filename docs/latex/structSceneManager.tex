@@ -1,0 +1,79 @@
+\doxysection{Scene\+Manager Struct Reference}
+\hypertarget{structSceneManager}{}\label{structSceneManager}\index{SceneManager@{SceneManager}}
+
+
+Singleton manager for running the active scenes and swapping scenes out.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structSceneManager_a1cbffaf3d39b4bf1d468b6f51c5e6e1f}{Add\+Scene}} (std\+::string scene\+Name, pybind11\+::module\+\_\+ scene\+Script)
+\item 
+void \mbox{\hyperlink{structSceneManager_ab682d1f1275485db5343b251381f2f08}{Change\+Active\+Scene}} (std\+::string scene\+Name)
+\item 
+void \mbox{\hyperlink{structSceneManager_ac91ca8158056cf7b72d003616396fe3e}{Run\+Active\+Scene}} (float dt)
+\item 
+\Hypertarget{structSceneManager_a9e8fe2377bb216ea63b1e28efa226786}\label{structSceneManager_a9e8fe2377bb216ea63b1e28efa226786} 
+void {\bfseries End\+Game} ()
+\begin{DoxyCompactList}\small\item\em Callable from scripts to signal that the game should be terminated. \end{DoxyCompactList}\item 
+\Hypertarget{structSceneManager_af17bcb458f4c276e5cdcbf85c8b0e362}\label{structSceneManager_af17bcb458f4c276e5cdcbf85c8b0e362} 
+bool {\bfseries Game\+Ended} ()
+\begin{DoxyCompactList}\small\item\em Callable from C++ to check if the game should be terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structSceneManager_ae1bd87a4b084970d130d87cdb715d5c6}\label{structSceneManager_ae1bd87a4b084970d130d87cdb715d5c6} 
+static \mbox{\hyperlink{structSceneManager}{Scene\+Manager}} \& {\bfseries instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton accessor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton manager for running the active scenes and swapping scenes out. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structSceneManager_a1cbffaf3d39b4bf1d468b6f51c5e6e1f}\label{structSceneManager_a1cbffaf3d39b4bf1d468b6f51c5e6e1f} 
+\index{SceneManager@{SceneManager}!AddScene@{AddScene}}
+\index{AddScene@{AddScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{AddScene()}{AddScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Add\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name,  }\item[{pybind11\+::module\+\_\+}]{scene\+Script }\end{DoxyParamCaption})}
+
+Adds a scene to the game under a given key 
+\begin{DoxyParams}{Parameters}
+{\em scene\+Name} & The key by which the scene can be accessed \\
+\hline
+{\em scene\+Script} & The python module which contains the logic for the scene \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structSceneManager_ab682d1f1275485db5343b251381f2f08}\label{structSceneManager_ab682d1f1275485db5343b251381f2f08} 
+\index{SceneManager@{SceneManager}!ChangeActiveScene@{ChangeActiveScene}}
+\index{ChangeActiveScene@{ChangeActiveScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{ChangeActiveScene()}{ChangeActiveScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Change\+Active\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{scene\+Name }\end{DoxyParamCaption})}
+
+Changes the active scene, shutting down the previous one and starting up the new one 
+\begin{DoxyParams}{Parameters}
+{\em scene\+Name} & The name of the scene to switch to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structSceneManager_ac91ca8158056cf7b72d003616396fe3e}\label{structSceneManager_ac91ca8158056cf7b72d003616396fe3e} 
+\index{SceneManager@{SceneManager}!RunActiveScene@{RunActiveScene}}
+\index{RunActiveScene@{RunActiveScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{RunActiveScene()}{RunActiveScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Run\+Active\+Scene (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+Runs the {\ttfamily \doxylink{structInput}{Input}}, {\ttfamily Update}, and {\ttfamily Draw} methods on the active scene 
+\begin{DoxyParams}{Parameters}
+{\em dt} & The delta time used for the {\ttfamily Update} method \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Scene\+Manager.\+hpp\item 
+src/Scene\+Manager.\+cpp\end{DoxyCompactItemize}

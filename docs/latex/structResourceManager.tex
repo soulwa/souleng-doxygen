@@ -1,0 +1,66 @@
+\doxysection{Resource\+Manager Struct Reference}
+\hypertarget{structResourceManager}{}\label{structResourceManager}\index{ResourceManager@{ResourceManager}}
+
+
+Singleton class which stores and manages resources like fonts and images.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ SDL\+\_\+\+Texture $>$ \mbox{\hyperlink{structResourceManager_a93e16d82f9002baaccc6a16e93d82237}{Load\+Texture}} (std\+::string filepath)
+\item 
+std\+::shared\+\_\+ptr$<$ TTF\+\_\+\+Font $>$ \mbox{\hyperlink{structResourceManager_aa7a205376e18efdac911510de624083d}{Load\+Font}} (std\+::string filepath, int ptsize)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structResourceManager_a6f1fdbd3b6cb40daa4f5a70f1f8c26b5}\label{structResourceManager_a6f1fdbd3b6cb40daa4f5a70f1f8c26b5} 
+static \mbox{\hyperlink{structResourceManager}{Resource\+Manager}} \& {\bfseries instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton accessor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class which stores and manages resources like fonts and images. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structResourceManager_aa7a205376e18efdac911510de624083d}\label{structResourceManager_aa7a205376e18efdac911510de624083d} 
+\index{ResourceManager@{ResourceManager}!LoadFont@{LoadFont}}
+\index{LoadFont@{LoadFont}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadFont()}{LoadFont()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ TTF\+\_\+\+Font $>$ Resource\+Manager\+::\+Load\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath,  }\item[{int}]{ptsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loads a font from disk into a {\ttfamily TTF\+\_\+\+Font}. 
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The name of the font file to load \\
+\hline
+{\em ptsize} & The desired font size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the loaded font 
+\end{DoxyReturn}
+\Hypertarget{structResourceManager_a93e16d82f9002baaccc6a16e93d82237}\label{structResourceManager_a93e16d82f9002baaccc6a16e93d82237} 
+\index{ResourceManager@{ResourceManager}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ SDL\+\_\+\+Texture $>$ Resource\+Manager\+::\+Load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loads an image from disk into an SDL\+\_\+\+Texture. Will load any image type supported by {\ttfamily SDL\+\_\+image.\+h} 
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The name of the image file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the loaded texture 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Resource\+Manager.\+hpp\item 
+src/Resource\+Manager.\+cpp\end{DoxyCompactItemize}
